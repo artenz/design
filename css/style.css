@@ -400,6 +400,12 @@ template {
     text-transform: uppercase;
     text-decoration: none;
     color: #ffffff; }
+    .hero__scroll-down::after {
+      content: '';
+      width: 30px;
+      height: 30px;
+      border: 2px solid #E3B873;
+      border-radius: 50%; }
 
 .instagram {
   display: flex;
@@ -407,10 +413,18 @@ template {
   align-items: center;
   background-color: #131313; }
   .instagram__link {
+    display: flex;
+    align-items: center;
     text-transform: uppercase;
     text-decoration: none;
     color: #E3B873;
-    transform: rotate(90deg); }
+    transform: rotate(90deg);
+    line-height: 0.8; }
+    .instagram__link::after {
+      content: '';
+      width: 50px;
+      height: 1px;
+      background-color: #E3B873; }
 
 .title {
   margin: 0;
