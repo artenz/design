@@ -402,10 +402,12 @@ template {
     color: #ffffff; }
     .hero__scroll-down::after {
       content: '';
+      background-color: url("../img/arrow-down.svg") no-repeat center;
       width: 30px;
       height: 30px;
       border: 2px solid #E3B873;
-      border-radius: 50%; }
+      border-radius: 50%;
+      margin-left: 12px; }
 
 .instagram {
   display: flex;
@@ -424,7 +426,8 @@ template {
       content: '';
       width: 50px;
       height: 1px;
-      background-color: #E3B873; }
+      background-color: #E3B873;
+      margin-left: 8px; }
 
 .title {
   margin: 0;
