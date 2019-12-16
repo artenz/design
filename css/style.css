@@ -406,9 +406,9 @@ img {
     .section-title__description {
       margin: auto;
       margin-top: 1.64rem;
-      font-size: 1.07rem;
+      font-size: 1.42rem;
       line-height: 135.84%;
-      max-width: 48rem; }
+      max-width: 53rem; }
 
 .header {
   position: fixed;
@@ -577,6 +577,9 @@ img {
 .design__section-title {
   margin-bottom: 2.78rem; }
 
+.design__description {
+  max-width: 40rem; }
+
 .modal {
   opacity: 0;
   visibility: hidden;
@@ -655,11 +658,15 @@ img {
     .design__section-title {
       color: #ffffff; }
     .design__card {
-      margin-bottom: 5.7rem; } }
+      margin-bottom: 5.7rem; }
+    .design__description {
+      max-width: 53rem;
+      font-size: 1.42rem; } }
 
 @media screen and (max-width: 570px) {
   .section__title__description {
-    max-width: 21.86rem; }
+    max-width: 53rem;
+    font-size: 1.42rem; }
   .contacts__phone {
     margin-right: 0;
     color: #ffffff;
