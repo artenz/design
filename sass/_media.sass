@@ -66,9 +66,17 @@
       display: none
 
 @media screen and ( max-height: 425px  )
-  .section--dark
-    &__row 
-      order: 
+  .row
+    display: flex
+    flex-wrap: wrap
+    flex-direction: row
+    align-items: top
+  .mobile
+    &-order
+      &__top
+        order: -1
+
+    
 
 
 

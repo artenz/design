@@ -767,3 +767,12 @@ img {
 @media screen and (max-height: 520px) {
   .hero__scroll-down {
     display: none; } }
+
+@media screen and (max-height: 425px) {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: top; }
+  .mobile-order__top {
+    order: -1; } }
