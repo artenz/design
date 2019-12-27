@@ -69,6 +69,7 @@ $(document).ready(function () {
     userName: {
       required: "Заполните поле",
       minlength: "Имя не короче двух букв",
+      maxlength: "Имя не более 15 букв",
 
     }, 
     userPhone: "Заполните поле",
