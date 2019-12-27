@@ -56,7 +56,8 @@ $(document).ready(function () {
    rules: {
     userName: {
       required: true,
-      minlength: 2
+      minlength: 2,
+      maxlength: 15
     },
     userPhone: "required",
     userEmail: {
@@ -67,7 +68,7 @@ $(document).ready(function () {
   messages: {
     userName: {
       required: "Заполните поле",
-      minlength: "Имя не короче двух букв"
+      minlength: "Имя не короче двух букв",
 
     }, 
     userPhone: "Заполните поле",
