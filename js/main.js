@@ -52,7 +52,7 @@ $(document).ready(function () {
 
 // Валидация формы
   $('.modal__form').validate({
-    errorClass: "invalid",
+   errorClass: "invalid",
    rules: {
     userName: {
       required: true,
@@ -79,12 +79,17 @@ $(document).ready(function () {
     }
   },
   submitHandler: function(form) {
-    $.$.ajax({
+    $.ajax({
       type: "POST",
       url: "send.php",
       data: $(form).serialize(),
       success: function (response) {
-        console.log('Ajax сработал. Ответ сервера: ' + response)
+        alert('Форма отправлена, мы свяжемся с вами в ближайщее время');
+        $(form)[0].reset();
+        modal.removeClass('modal--visible');
+      },
+      error: function (response) {
+        console.error('Ошибка запроса ' + response);
       }
     });
   }
