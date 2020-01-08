@@ -5,9 +5,9 @@ $userEmail = $_POST['userEmail'];
 $userPhone = $_POST['userPhone'];
 
 // Load Composer's autoloader
-require 'phpmailer/Exception.php';
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
+require 'phpmailer/Exception.php';
 
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -24,13 +24,13 @@ try {
     $mail->Port       = 465;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('timulunati@gmail.com', 'Ati');
-    $mail->addAddress('d91_tenzin@mail.ru.', 'Tenz');     // 
+    $mail->setFrom('timulunati@gmail.com');
+    $mail->addAddress('d91_tenzin@mail.ru');     // Add a recipient
+
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Новая заявка с сайта';
-    $mail->Body    = "Имя пользователя: ${userName}, Его телефон: ${userPhone}, Его почта: ${userEmail}";
-
+    $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${userEmail}";
 
     $mail->send();
     header('Location: thanks.html');
