@@ -685,7 +685,7 @@ img {
     background-color: rgba(0, 0, 0, 0.8); }
 
 .control__text {
-  max-width: 40.785rem;
+  max-width: 40rem;
   margin: auto;
   margin-bottom: 4.285rem;
   text-align: center;
@@ -800,7 +800,6 @@ img {
     font-weight: normal;
     font-size: 1.428rem;
     text-align: center;
-    margin-bottom: 1rem;
     margin-top: 0; }
   .footer__form {
     display: -webkit-box;
@@ -838,7 +837,7 @@ img {
     margin-bottom: 4rem;
     margin-top: 2rem; }
   .footer__title {
-    color: #E3B873;
+    color: #ffffff;
     max-width: 33rem;
     margin: auto; }
   .footer__social {
@@ -1010,83 +1009,3 @@ img {
     flex-direction: row;
     -webkit-box-align: top;
     align-items: top; } }
-
-/* &#34;Блок-обертка&#34;, где мы задаем фоновое изображение скриншотом как на карте */
-.ymap-container {
-  position: relative;
-  margin: 3em 0 2em 0;
-  overflow: hidden;
-  cursor: pointer;
-  background: url('../img/yandex-before-load-marker.png') #ffffff no-repeat;
-  background-position: center center;
-  background-size: cover;
-  box-shadow: 0 0 2em  0 rgba(0,0,0,.2);
-}
- 
-/* Блок, в котором появится Яндекс.Карта */
-#map-yandex {
-  position: relative;
-  z-index: 7;
-  width: 100%;
-  height: 25rem;
-  cursor: pointer;
-  background-color: transparent;
-}
-
-
-/* Индикатор загрузки, который показывается до загрузки карты */
-.loader {
-  position: absolute;
-  z-index: 15;
-  top: -100%;
-  left: 0;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  color: #000000;
-  transition: opacity .7s ease;
-  opacity: 0;
-  background-color: rgba(0,0,0,.55);
-}
- 
-.loader:after,
-.loader:before {
-  box-sizing: border-box;
-}
- 
-.loader.is-active {
-  top: 0;
-  opacity: 1;
-}
- 
-.loader-default:after {
-  position: absolute;
-  top: calc(50% - 24px);
-  left: calc(50% - 24px);
-  width: 48px;
-  height: 48px;
-  content: '';
-  animation: rotation 1s linear infinite;
-  border: solid 8px #ffffff;
-  border-left-color: transparent;
-  border-radius: 50%;
-}
- 
-@keyframes rotation {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
- 
-@keyframes blink {
-  from {
-    opacity: .5;
-  }
-  to {
-    opacity: 1;
-  }
-}
